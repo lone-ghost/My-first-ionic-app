@@ -1,0 +1,29 @@
+<ion-content padding>
+  <form [formGroup]="signupForm">
+    <ion-item>
+      <ion-input formControlName="first_name" type="text" placeholder="Prénoms"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input formControlName="last_name" type="text" placeholder="Nom"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input formControlName="email" type="email" placeholder="Adresse e-mail"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input formControlName="password" type="password" placeholder="Mot de passe" icon-right></ion-input>
+    </ion-item>
+
+    <p class="error-message" color="danger" *ngIf="!signupForm.controls['password'].valid && signupForm.controls['password'].touched">Les mots de passes sont différents</p>
+
+    <ion-item>
+      <ion-input formControlName="password_confirm" type="password" placeholder="Confirmez le mot de passe"></ion-input>
+    </ion-item>
+
+    <p class="error-message" *ngIf="!signupForm.controls['password'].valid && signupForm.controls['password'].touched">Les mots de passes sont différents</p>
+
+    <ion-button id="signupButton" (click)="submitCredentials(signupForm)" color="default" expand="block" shape="round">Créer un compte</ion-button>
+  </form>
+</ion-content>

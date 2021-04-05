@@ -1,0 +1,22 @@
+form{
+    padding: 10px;
+    margin-top: 20px;
+    margin: 0px 10px 0px 10px;
+}
+
+#signupButton{
+    margin-top: 20px;
+    background-color: rgb(94, 241, 94);
+    border-radius: 20px;
+}
+
+.error-message {
+    min-height: 2.2rem;
+    margin: 4px 0;
+    font-size: 10px;
+    color: #ff6153;
+
+    .item-inner {
+        border-bottom: 0;
+    }
+}

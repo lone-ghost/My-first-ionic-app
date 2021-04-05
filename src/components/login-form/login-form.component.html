@@ -1,0 +1,22 @@
+<form [formGroup]="loginForm">
+  <ion-item>
+    <ion-label position="stacked">Adresse e-mail</ion-label>
+    <ion-input formControlName="email" type="email" [class.invalid]="!loginForm.controls['email'].valid && loginForm.controls['email'].touched" required>
+    </ion-input>
+  </ion-item>
+
+  <p class="error-message" *ngIf="!loginForm.controls['email'].valid && loginForm.controls['email'].touched">Adresse e-mail invalide.</p>
+  
+  <ion-item id="zone_mdp">
+    <ion-label position="stacked">Mot de passe</ion-label>
+    <ion-input formControlName="password" type="password"></ion-input>
+  </ion-item>
+
+  <ion-button id="forgotPasswordButton" fill="clear" (click)="navigateForgot()">Mot de passe oublié?</ion-button>
+
+  <p class="error-message" *ngIf="!loginForm.controls['password'].valid && loginForm.controls['password'].touched">Le mot de passe doit contenir au moins 6 caractères.</p>
+  
+  <ion-button id="bouton_connexion" (click)="submitCredentials(loginForm)" [disabled]="!loginForm.valid" color="default" expand="block" shape="round">Connexion</ion-button>
+  <p id="newUser">Ou</p>
+  <ion-button id="boutonNewAccount" color="default" expand="block" shape="round" (click)="navigateSignup()">Créez un compte</ion-button>
+</form>

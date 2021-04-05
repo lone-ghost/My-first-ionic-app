@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    
+    <ion-title>Créer une annonce</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="adForm">
+    <ion-item>
+      <ion-input required formControlName="titreAnnonce" type="text" placeholder="Titre de l'annonce"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-textarea required formControlName="descriptionAnnonce" type="text" placeholder="Description de votre besoin"></ion-textarea>
+    </ion-item>
+
+    <ion-button block color="default" shape="round" type="submit" [disabled]="adForm.invalid" (click)="createAd()">Valider</ion-button>
+  </form>
+</ion-content>

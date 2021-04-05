@@ -1,0 +1,51 @@
+#container {
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+ion-menu-button {
+  color: #56e456;
+}
+
+ion-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+ion-searchbar {
+  margin-top: 10px;
+}
+
+h3 {
+  text-align: center;
+  vertical-align: center;
+  background-color: #56e456;
+  height: 40px;
+  padding-top: 7px;
+  margin-top: 20px;
+}
+
+ion-card-header {
+  font-weight: bold;
+  color: green;
+}

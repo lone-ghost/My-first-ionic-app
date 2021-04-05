@@ -1,0 +1,24 @@
+ion-menu-button {
+  color: #56e456;
+}
+
+ion-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+ion-fab {
+  background-color: #56e456;
+  border-radius: 50%;
+}
+
+ion-fab-button {
+  height: 50px;
+  width: 50px;
+}
+
+ion-card-header {
+  font-weight: bold;
+  color: green;
+}

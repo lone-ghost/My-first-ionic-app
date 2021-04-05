@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>Mes annonces</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let ad of u_adList | async">
+    <ion-card-header>{{ ad?.adTitle }}</ion-card-header>
+    <ion-card-content>{{ ad?.adDetails }}
+      <ion-buttons>
+        <ion-button>
+          <ion-icon slot="icon-only" name="md-heart-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-card-content>
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="default" routerLink="/create-ad"><ion-icon name="add"></ion-icon></ion-fab-button>
+  </ion-fab>
+</ion-content>

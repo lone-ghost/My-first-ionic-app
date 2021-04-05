@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Profil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>Informations personnelles</ion-list-header>
+  </ion-list>
+  
+  <ion-item >
+    <ion-label>
+      <ion-grid>
+        <ion-row>Prénoms et nom</ion-row>
+        <ion-row *ngIf="userProfile?.fullName">{{ userProfile?.fullName }}</ion-row>
+        <ion-row><ion-button id="btn_updateName" fill="clear" color="default" (click)="updateName()">Modifier</ion-button></ion-row>
+      </ion-grid>
+    </ion-label>
+  </ion-item>
+
+  <ion-item >
+    <ion-label>
+      <ion-grid>
+        <ion-row>Adresse e-mail</ion-row>
+        <ion-row *ngIf="userProfile?.fullName">{{ userProfile?.email }}</ion-row>
+        <ion-row><ion-button id="btn_updateMail" fill="clear" color="default" (click)="updateEmail()">Modifier</ion-button>
+        </ion-row>
+      </ion-grid>
+    </ion-label>
+  </ion-item>
+
+  <ion-item >
+    <ion-label>
+      <ion-grid>
+        <ion-row>Mot de passe</ion-row>
+        <ion-row *ngIf="userProfile?.fullName">{{ userProfile?.password }}</ion-row>
+        <ion-row><ion-button id="btn_updatePassword" fill="clear" color="default" (click)="updatePassword()">Modifier</ion-button></ion-row>
+      </ion-grid>
+    </ion-label>
+  </ion-item>
+</ion-content>

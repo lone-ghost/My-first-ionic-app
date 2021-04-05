@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <p>Créer un compte</p>
+  <app-signup-form #signupForm (formSubmitted)=signupUser($event)></app-signup-form>
+</ion-content>

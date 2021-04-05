@@ -1,0 +1,13 @@
+ion-header {
+  height: 24%;
+  background-color: rgba(184, 184, 184, 0.527);
+}
+
+ion-avatar {
+  margin: 30px 1px 0px 100px;
+}
+
+h5 {
+  text-align: center;
+  font-weight: bold;
+}

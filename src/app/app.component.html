@@ -1,0 +1,24 @@
+<ion-app>
+  <ion-menu side="start" menuId="first" contentId="content" swipeGesture="true">
+    <ion-header>
+      <ion-avatar item-left routerLink="/profile" (click)="hideMenu()">
+        <img src="assets/customIcons/m_user.svg">
+      </ion-avatar>
+      <h5>{{ userProfile?.fullName }}</h5>
+    </ion-header>
+
+    <ion-content padding>
+      <ion-list >
+      <ion-menu-toggle auto-hide="true">
+        <ion-item routerLink="/home"><ion-icon src="assets/customIcons/m_home.svg" slot="start"></ion-icon>Accueil</ion-item>
+        <ion-item routerLink="/my-ads"><ion-icon src="assets/customIcons/m_newspaper.svg" slot="start"></ion-icon>Mes annonces</ion-item>
+        <ion-item routerLink="/contact-us"><ion-icon src="assets/customIcons/m_customer-service.svg" slot="start" ></ion-icon>Nous contacter</ion-item>
+        <ion-item ><ion-icon src="assets/customIcons/m_star.svg" slot="start"></ion-icon>Evaluer l'application</ion-item>
+        <ion-item (click)="signOut()"><ion-icon src="assets/customIcons/m_logout.svg" slot="start"></ion-icon>Déconnexion</ion-item>
+      </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="content"></ion-router-outlet>
+</ion-app>
